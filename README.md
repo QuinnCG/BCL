@@ -2,6 +2,7 @@
 A compiler for "Basic Command Language".
 
 Basic Command Language is a personel experiment for generating IL code. It's not feature complete and provides terrible error messages.
+It was initially made in one afternoon; though there may be some fixes here and there.
 
 BCL Example
 ```bcl
