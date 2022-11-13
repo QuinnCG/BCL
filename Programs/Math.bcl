@@ -1,0 +1,21 @@
+﻿
+var int x 5
+var int y 7
+
+var int sum
+var int difference
+var int product
+var int remainder
+
+call add x y sum
+call subtract x y difference
+call multiply x y product
+call divide x y remainder
+
+call print sum
+call print difference
+call print product
+call print remainder
+
+// To prevent the .exe file from instantly closing.
+call pause

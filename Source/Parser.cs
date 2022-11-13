@@ -12,6 +12,7 @@ internal class Parser
 		// Seperate the source code by the newline character.
 		string[] lines = source.Split(Environment.NewLine);
 
+		int lineNum = 0;
 		foreach (var line in lines)
 		{
 			// Seperate the line by its spaces.
@@ -27,6 +28,17 @@ internal class Parser
 			{
 				Expressions.Add(new Expression(cmd, args));
 			}
+			// "//" command lines and whitespace of any sort is NOT an error.
+			else if (cmd.StartsWith("//") || string.IsNullOrWhiteSpace(cmd))
+			{
+				continue;
+			}
+			else
+			{
+				throw new Exception($"Unknown command \"{cmd}\".");
+			}
+
+			lineNum++;
 		}
 	}
 }
