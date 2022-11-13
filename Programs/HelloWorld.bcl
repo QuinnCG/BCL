@@ -1,0 +1,6 @@
+﻿
+var string msg Hello World!
+call print msg
+
+// To prevent the .exe file from instantly closing.
+call pause

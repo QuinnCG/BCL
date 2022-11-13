@@ -13,12 +13,20 @@ internal static class Program
     static void Main()
     {
         string filename;
+        string path;
+
         while (true)
         {
             Console.WriteLine("Enter file to compile.");
             var input = Console.ReadLine();
+            path = Directory.GetCurrentDirectory() + "\\Programs\\" + input;
 
-            if (File.Exists(input))
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                continue;
+            }
+
+            if (File.Exists(path))
             {
                 // Make sure the file extension is ".bcl".
                 if (input.Split('.')[1] is "bcl")
@@ -29,9 +37,10 @@ internal static class Program
             }
 
             Console.Clear();
-        }
+			Console.WriteLine($"Could not find file {input} in \"Program\" folder.");
+		}
 
-        string source = File.ReadAllText(filename);
+        string source = File.ReadAllText(path);
         Parser parser;
         Generator generator;
 

@@ -1,0 +1,12 @@
+﻿
+var int index 0
+var int max 10
+var int one 1
+
+label start
+call print index
+call add index one index
+call goto start index < max
+
+// To prevent the .exe file from instantly closing.
+call pause

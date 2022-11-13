@@ -1,0 +1,20 @@
+﻿
+var int x 5
+var int y 5
+
+call goto true x = y
+call goto false
+
+label true
+var string msgTrue True!
+call print msgTrue
+call goto end
+
+label false
+var string msgFalse False!
+call print msgFalse
+
+label end
+
+// To prevent the .exe file from instantly closing.
+call pause

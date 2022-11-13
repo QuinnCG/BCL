@@ -1,0 +1,7 @@
+﻿
+var string input
+call read input
+call print input
+
+// To prevent the .exe file from instantly closing.
+call pause
