@@ -75,6 +75,7 @@ internal static class Program
 			RedirectStandardOutput = true,
 			RedirectStandardError = true
 		};
+
 		using var ilProcess = Process.Start(info);
         if (ilProcess is null)
         {
