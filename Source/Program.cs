@@ -36,7 +36,7 @@ internal static class Program
                 }
                 else
                 {
-                    Console.WriteLine("File must end with \".bcl\"");
+                    Console.WriteLine("File must end with \".bcl\".");
                 }
             }
 
